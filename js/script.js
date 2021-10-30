@@ -42,13 +42,14 @@ guessLetterButton.addEventListener("click", function (e) {
     const guess = letterInput.value;
     // Let's make sure that it is a single letter
     const goodGuess = validateInput(guess);
-});
+
 
 if (goodGuess) {
 //We've got a letter! Let's guess!
 makeGuess(guess);
+}
 letterInput.value = "";
-};
+});
 
 const validateInput = function (input) {
     const acceptedLetter = /[a-zA-Z]/;
